@@ -54,7 +54,7 @@ public class Main {
     }
 
     // Initialize the values for backtrack method.
-    public static void makeChange(int n){
+    public static Set<List<Integer>> makeChange(int n){
         List<Integer> result = new ArrayList<>();
         result.add(0,0);
         result.add(1,0);
@@ -62,6 +62,8 @@ public class Main {
         result.add(3,0);
 
         backTrack(n, result);
+
+        return possibleWays;
     }
 }
 
