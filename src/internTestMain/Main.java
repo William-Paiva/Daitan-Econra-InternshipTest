@@ -1,9 +1,6 @@
 package internTestMain;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -12,7 +9,12 @@ public class Main {
     public static void main(String[] args) {
         possibleWays = new HashSet<>();
 
-        makeChange(12);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the value for n: ");
+        int value = scanner.nextInt();
+
+        makeChange(value);
         System.out.println(possibleWays);
     }
 
