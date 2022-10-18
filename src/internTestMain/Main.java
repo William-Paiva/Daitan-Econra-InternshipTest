@@ -18,6 +18,9 @@ public class Main {
         System.out.println(possibleWays);
     }
 
+    //backTrack: Calculates all possible ways of giving changes using different types of coins.
+    // This method uses a recursive backtrack without performing any prunes.
+
     public static void backTrack(int n, List<Integer> partial){
         if(n == 0) {
             possibleWays.add(new ArrayList<>(partial));
@@ -50,6 +53,7 @@ public class Main {
         }
     }
 
+    // Initialize the values for backtrack method.
     public static void makeChange(int n){
         List<Integer> result = new ArrayList<>();
         result.add(0,0);
